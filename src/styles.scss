@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ccc;
+}
+
+.btn{
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: .9rem;
+  cursor: pointer;
+}
+
+.errors-box{
+  display: flex;
+  small{
+    color: red;
+    font-size: .8rem;
+    margin-top: .2rem;
+  }
+}
+
+.swal2-popup {
+  width: 400px;
+  height: fit-content;
+}
+
+.swal2-icon {
+  width: 80px;
+}
