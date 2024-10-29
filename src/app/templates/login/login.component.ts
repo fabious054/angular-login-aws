@@ -49,7 +49,7 @@ export class LoginComponent {
         this.authService.login();
 
         setTimeout(() => {
-          this.router.navigate(['home']);
+          this.router.navigate(['']);
         }, 2000);
       }else{
 
@@ -117,7 +117,7 @@ export class LoginComponent {
         this.authService.login();
 
         setTimeout(() => {
-          this.router.navigate(['home']);
+          this.router.navigate(['']);
         }, 2000);
       } else {
         Swal.fire({

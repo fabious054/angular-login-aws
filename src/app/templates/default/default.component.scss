@@ -1,0 +1,97 @@
+.header{
+  background-color: #F74962;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+
+  .logoBox{
+      font-size: 1.5rem;
+      color: #fff;
+  }
+
+  .userInfos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+
+    img{
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+  }
+}
+
+.aside{
+  color: #fff;
+  width: 250px;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: end;
+  .nav{
+    background-color: #F74962;
+    width: 100%;
+    margin-left: 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    text-align: center;
+
+    ul{
+      list-style: none;
+      padding: 1rem;
+      li{
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .markBall{
+          margin-right: .5rem;
+          width: 10px;
+          height: 10px;
+          background-color: #fff;
+          border-radius: 50%;
+          opacity: 0;
+          margin-right: 10px;
+          transition: all ease .3s;
+        }
+        .markBall.show{
+          opacity: 1;
+        }
+        .navButton{
+          background-color: #F74962;
+          border: none;
+          color: #fff;
+          font-size: 1rem;
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &:hover{
+          .markBall{
+            opacity: 1;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+.main{
+  display: flex;
+  // width: 100%;
+  // height: calc(100vh - 60px);
+  .content{
+    width: calc(100% - 250px);
+    height: calc(100vh - 60px);
+    color: #000;
+  }
+}

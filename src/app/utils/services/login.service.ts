@@ -94,5 +94,17 @@ export class LoginService {
     return null;
   }
 
+  async logout() :Promise<{status:boolean,message:string}> {
+    try{
+      await signOut();
+      console.log('Logout successful');
+      return {status: true, message: 'Logout successful'};
+    }
+    catch(error:any){
+      console.error('Error signing out:', error);
+      return {status: false, message: error.message};
+    }
+  }
+
 
 }

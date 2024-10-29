@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="logoBox">
+    Login System Learning
+  </div>
+  <div class="userInfos">
+    <small>{{userLogged.email}}</small>
+    <img title="{{userLogged.email}}" src="/image.png" alt="User">
+    <img (click)="logout()" src="/logout.png" alt="Logout">
+  </div>
+</header>
+<main class="main">
+  <aside class="aside">
+    <nav class="nav">
+      <ul>
+        <li>
+          <span class="markBall {{moduleActive == 'home' ? 'show' : ''}}"></span>
+          <button class="navButton" routerLink="">Home</button>
+        </li>
+        <li>
+          <span class="markBall {{moduleActive == 'about' ? 'show' : ''}}"></span>
+          <button class="navButton" routerLink="">About</button>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="content">
+
+    <router-outlet></router-outlet>
+  </div>
+</main>
+
