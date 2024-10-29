@@ -14,17 +14,16 @@
       <ul>
         <li>
           <span class="markBall {{moduleActive == 'home' ? 'show' : ''}}"></span>
-          <button class="navButton" routerLink="">Home</button>
+          <button (click)="changeRouteModule('home')" class="navButton" routerLink="">Home</button>
         </li>
         <li>
-          <span class="markBall {{moduleActive == 'about' ? 'show' : ''}}"></span>
-          <button class="navButton" routerLink="">About</button>
+          <span class="markBall {{moduleActive == 'employees' ? 'show' : ''}}"></span>
+          <button (click)="changeRouteModule('employees')" class="navButton" routerLink="/employees">Employees</button>
         </li>
       </ul>
     </nav>
   </aside>
   <div class="content">
-
     <router-outlet></router-outlet>
   </div>
 </main>

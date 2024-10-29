@@ -21,8 +21,14 @@ export class DefaultComponent {
   ) {}
 
     ngOnInit(): void {
-      this.moduleActive = this.route.snapshot.routeConfig?.path || 'home';
+      this.route.url.subscribe(() => {
+        // Use 'firstChild' para pegar a rota ativa
+        const activeRoute = this.route.firstChild;
+        this.moduleActive = activeRoute?.snapshot.routeConfig?.path || 'home';
+      });
       this.userSession();
+      console.log('Module active:', this.moduleActive);
+
     }
 
     async userSession() {
@@ -48,8 +54,10 @@ export class DefaultComponent {
          this.router.navigate(['/login']);
         },2000);
       }
+    }
 
-
+    changeRouteModule(module: string) {
+      this.moduleActive = module;
     }
 
 }
