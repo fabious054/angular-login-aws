@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,5 +17,15 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     return this.authenticated;
+  }
+
+  constructor(
+    private loginService : LoginService
+  ) {
+    loginService.userSession().then((user) => {
+      if(user){
+        this.login();
+      }
+    });
   }
 }
