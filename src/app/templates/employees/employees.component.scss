@@ -7,12 +7,12 @@
   height: calc(100vh - 60px);
   text-align: center;
   color: #fff;
+  padding-inline: 1rem;
 
   .grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr); // Define 3 colunas fixas
     grid-gap: 1rem;
     width: 100%;
-    padding: 1rem;
   }
 }

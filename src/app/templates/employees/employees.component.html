@@ -1,5 +1,5 @@
 <div class="container">
   <div class="grid">
-    <app-employee></app-employee>
+    <app-employee *ngFor="let employee of employes" [employee]="employee"></app-employee>
   </div>
 </div>
